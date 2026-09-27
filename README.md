@@ -37,6 +37,11 @@ vendor/rnc          # 上游 jacek4yang/rnc（MIT），ctf-tube 的 path 依赖
 需要 Rust 工具链（rustc ≥ 1.88，因为 `rmcp` 已解禁；运行时实际不依赖 rmcp）。
 
 ```bash
+# 克隆（vendor/rnc 是 submodule，构建 ctf-tube 需要）
+git clone --recurse-submodules https://github.com/jacek4yang-labs/auto-ctf.git
+cd auto-ctf
+# 若已裸克隆，补拉 submodule：git submodule update --init
+
 # 全量测试
 cargo test --workspace          # 182 passed / 0 failed
 
