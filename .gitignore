@@ -26,6 +26,7 @@ challenges/
 # ===== Third-party tool binaries (redistributable upstreams, not our code) =====
 tools/
 vendor/reverse-mcp/
+vendor/seep-reverse-lab/
 # vendor/rnc IS kept: ctf-tube depends on it via path dep (MIT, our upstream)
 
 # ===== Unverified-license reference bundles =====
