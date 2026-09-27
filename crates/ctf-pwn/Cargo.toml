@@ -1,0 +1,11 @@
+[package]
+name = "ctf-pwn"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+num-bigint = { workspace = true }
+num-traits = { workspace = true }
+thiserror = { workspace = true }
+goblin = { version = "0.9", default-features = false, features = ["std", "elf64", "elf32", "endian_fd"] }

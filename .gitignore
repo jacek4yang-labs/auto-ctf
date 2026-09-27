@@ -1,0 +1,58 @@
+# ===== Secrets / credentials (never commit) =====
+api-key.txt
+*.token
+.env
+.env.*
+**/secrets*
+*.pem
+*.key
+
+# ===== Personal / runtime state (not for public release) =====
+# yafu/sidecar run logs embed hostname/build info; keep them local.
+*.log
+*.dat
+siqs.dat
+cc_pwn
+sh_pwn
+.tmp/
+refs/.tmp/
+.pytest_cache/
+
+# ===== Third-party challenge archives + copyrighted attachments =====
+# 11k+ files pulled from BUUCTF/DASBOOK/BJDCTF etc.; excluded for size+license.
+# Self-written solve notes live inline in docs/CHALLENGE-LOG.md instead.
+challenges/
+
+# ===== Third-party tool binaries (redistributable upstreams, not our code) =====
+tools/
+vendor/reverse-mcp/
+# vendor/rnc IS kept: ctf-tube depends on it via path dep (MIT, our upstream)
+
+# ===== Unverified-license reference bundles =====
+refs/autorsa/
+
+# ===== Redundant packaging (the .md sources are committed alongside) =====
+docs/training/packages/*.zip
+
+# ===== Empty / deprecated top-level layout (root-only matches) =====
+/src/
+/kernels/
+
+# ===== Build artifacts =====
+target/
+**/target/
+build/
+dist/
+*.egg-info/
+
+# ===== Python cache =====
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+
+# ===== OS noise =====
+.DS_Store
+Thumbs.db
+*.swp

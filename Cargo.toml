@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ctf-core",
+    "crates/ctf-codec",
+    "crates/ctf-crypto",
+    "crates/ctf-parse",
+    "crates/ctf-net",
+    "crates/ctf-sidecar",
+    "crates/ctf-forge-cli",
+    "crates/ctf-forge-mcp",
+    "crates/ctf-tube",
+    "crates/ctf-pwn",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"
+num-integer = "0.1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+data-encoding = "2"
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+opt-level = 2
+
+# optimize dependencies (num-bigint etc.) even in test builds; keeps test code debuggable
+[profile.dev.package."*"]
+opt-level = 2

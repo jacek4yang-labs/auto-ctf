@@ -1,0 +1,3 @@
+[submodule "vendor/rnc"]
+	path = vendor/rnc
+	url = https://github.com/jacek4yang/rnc.git

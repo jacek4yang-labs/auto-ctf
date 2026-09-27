@@ -1,0 +1,10 @@
+[package]
+name = "ctf-tube"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+rnc = { path = "../../vendor/rnc" }
+encoding_rs = "0.8"
+thiserror = { workspace = true }

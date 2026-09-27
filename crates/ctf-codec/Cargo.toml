@@ -1,0 +1,10 @@
+[package]
+name = "ctf-codec"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+data-encoding = { workspace = true }
+flate2 = "1"
+ctf-core = { path = "../ctf-core" }
